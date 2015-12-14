@@ -1,3 +1,4 @@
+#patients is a dataframe with all the information of course.
 #Make a 3-way frequency table
 arr = table(patients$Patient, patients$Familiarl.sporadic, patients$ACMG.classification)
 
@@ -16,6 +17,7 @@ dimnames(arr) = list(patients = unique(patients$Patient), History=c("Familial", 
 
 #Make a frequency table
 ftable(arr, row.vars=c("History","Classification"), col.vars="patients")
+#should look something like:
 #                                  patients 7 9 46 60 73 76 84 92 127 128
 # History   Classification                                               
 # Familial  Benign                          0 0  0  0  0  0  0  0   0   1
